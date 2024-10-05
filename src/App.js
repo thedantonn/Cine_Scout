@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Browse from './components/Browse';
 import DropProfile from './components/DropProfile';
 import ProtectedRoute from './components/ProtectedRoute';
+import MainContainer from './components/MainContainer';
 
 
 function App() {
@@ -25,6 +26,10 @@ function App() {
     {
       path: "/drop",
       element: <DropProfile/>
+    },
+    {
+      path: "/main",
+      element: <MainContainer/>
     }
   ])
   return (

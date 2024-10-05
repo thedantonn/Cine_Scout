@@ -4,7 +4,7 @@ import {createUserWithEmailAndPassword,signInWithEmailAndPassword } from "fireba
 import { auth } from '../utilis/firebase';
 import { useDispatch } from 'react-redux';
 import { onAuthStateChanged,updateProfile } from "firebase/auth";
-import { createUser, removeUser } from './userSlice';
+import { createUser, removeUser } from '../Slice/userSlice';
 import { useNavigate } from 'react-router-dom';
 
 
