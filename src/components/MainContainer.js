@@ -12,7 +12,7 @@ const MainContainer = () => {
     }
     const mainMovie = movies[0]
     const {id} = mainMovie
-    console.log(id)
+
     
   return (
     <div>

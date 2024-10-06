@@ -80,7 +80,6 @@ const Login = () => {
     const user = userCredential.user;
     const {uid,displayName,email}= user;
     dispatch(createUser({uid: uid, displayName: displayName, email: email}))
-    console.log(user)
     navigate("/browse")
   })
   .catch((error) => {

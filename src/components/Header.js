@@ -6,13 +6,12 @@ import { useSelector } from "react-redux";
 
 export const Header = () => {
     const userInfo = useSelector((store) => store.user)
-    console.log(userInfo?.displayName)
     const [isbtnDown,setisbtnDown] = useState(false)
     const handleDrop = () => {
         setisbtnDown(!isbtnDown)
     }
   return (
-    <div className="flex justify-between py-4 px-8 bg-gradient-to-b from-black">
+    <div className="absolute z-20 w-screen flex justify-between py-4 px-8 bg-gradient-to-b from-black">
        <div className="flex text-white items-center">
        <img 
         className=" w-32 m-2"

@@ -6,7 +6,6 @@ import { API_OPTIONS } from '../utilis/constants'
 const useTrailer = (movieId) => {
     const dispatch = useDispatch()
     console.log(movieId)
-
     useEffect(()=> {
         getMovieBackgroundVideo ()
     },[])
@@ -14,11 +13,11 @@ const useTrailer = (movieId) => {
     const getMovieBackgroundVideo = async() => {
         const data = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`, API_OPTIONS)
         const json = await data.json()
-        console.log(json.results)
         const filterData = json.results.filter((video) => video.type === "Trailer")
-        console.log(filterData)
-        const trailer = filterData.length === 0 ? filterData[1] : json.results[0]
+        const trailer = filterData.length === 0 ? filterData[2] : json.results[2]
         dispatch(addTrailer(trailer))
+        console.log(trailer)
+        console.log(filterData)
     }
 }
 

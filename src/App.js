@@ -7,6 +7,8 @@ import Browse from './components/Browse';
 import DropProfile from './components/DropProfile';
 import ProtectedRoute from './components/ProtectedRoute';
 import MainContainer from './components/MainContainer';
+import SecondContainer from './components/SecondContainer';
+import VideoBackground from './components/VideoBackground';
 
 
 function App() {
@@ -30,6 +32,10 @@ function App() {
     {
       path: "/main",
       element: <MainContainer/>
+    },
+    {
+      path: "/second",
+      element: <VideoBackground/>
     }
   ])
   return (
