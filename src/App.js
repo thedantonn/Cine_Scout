@@ -9,6 +9,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import MainContainer from './components/MainContainer';
 import SecondContainer from './components/SecondContainer';
 import VideoBackground from './components/VideoBackground';
+import { Header } from './components/Header';
 
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
     },
     {
       path: "/second",
-      element: <VideoBackground/>
+      element: <Header/>
     }
   ])
   return (

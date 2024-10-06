@@ -9,3 +9,6 @@ export const API_OPTIONS = {
     }
   };
 export const  Movie_Poster_URL = "https://image.tmdb.org/t/p/w500/"
+export const SUPPORTED_LANGUAGE = [{identifier : "english" , language : "english"},
+  {identifier : "hindi" , language : "hindi"},{identifier : "odia" , language : "odia"}
+]

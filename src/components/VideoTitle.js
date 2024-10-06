@@ -5,10 +5,10 @@ const VideoTitle = (props) => {
     const {movieInfo} = props
     const {overview,original_title} = movieInfo
   return (
-    <div className=" w-screen aspect-video absolute z-10 pt-96 bg-gradient-to-r from-black ">
+    <div className=" w-screen aspect-video absolute z-10 pt-56 bg-gradient-to-r from-black ">
         <div className='px-12'>
             <div className='w-1/2 py-4 '>
-            <h1 className='text-white text-5xl font-bold'>{original_title}</h1>
+            <h1 className='text-white text-5xl pb-4 font-bold'>{original_title}</h1>
             <p className='text-white text-xl break-words leading-relaxed'>{overview}</p>
             </div>
             <div className='flex space-x-4 pb-4'>
