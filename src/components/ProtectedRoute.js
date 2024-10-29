@@ -4,7 +4,7 @@ import { Navigate} from 'react-router-dom'
 
 const ProtectedRoute = ({children}) => {
     const user = useSelector((store) => store.user)
-    if(!user) {
+    if(!user) { 
         return < Navigate to= "/" replace />
     }
   return children

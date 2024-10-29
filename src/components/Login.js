@@ -22,7 +22,7 @@ const Login = () => {
         if (user) {
           const { uid, email, displayName } = user;
           dispatch(createUser({ uid: uid, email: email, displayName: displayName }));
-          navigate('/browse');
+          navigate('/browsePage');
         } else {
           dispatch(removeUser());
           navigate('/');
@@ -41,7 +41,6 @@ const Login = () => {
         e.preventDefault()
         const message = CheckValidate(email.current.value,password.current.value)
         seterrormessage(message)
-        console.log(message)
         if(message) return 
         
         if(issignin){
@@ -52,7 +51,6 @@ const Login = () => {
                 //displayName.current.value
             ).then((userCredential) => {
                const user = userCredential.user;
-               console.log(user)
                updateProfile(user, {
                 displayName: displayName.current.value , photoURL: "https://example.com/jane-q-user/profile.jpg"
               }).then(() => {
@@ -64,7 +62,7 @@ const Login = () => {
                 // An error occurred
                 // ...
               });
-               navigate("/browse")
+               navigate("/browsePage")
              }).catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
@@ -80,7 +78,7 @@ const Login = () => {
     const user = userCredential.user;
     const {uid,displayName,email}= user;
     dispatch(createUser({uid: uid, displayName: displayName, email: email}))
-    navigate("/browse")
+    navigate("/browsePaage")
   })
   .catch((error) => {
     const errorCode = error.code;

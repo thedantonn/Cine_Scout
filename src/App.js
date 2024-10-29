@@ -1,16 +1,13 @@
 import { Provider } from 'react-redux';
 import './App.css';
-import LandingPage from './components/LandingPage';
+import LandingPage from './components/Pages/LandingPage';
 import appStore from './utilis/appStore';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Browse from './components/Browse';
-import DropProfile from './components/DropProfile';
 import ProtectedRoute from './components/ProtectedRoute';
 import MainContainer from './components/MainContainer';
-import SecondContainer from './components/SecondContainer';
-import VideoBackground from './components/VideoBackground';
-import { Header } from './components/Header';
-
+import TrailerPage from './components/Pages/TrailerPage';
+import BrowsePage from './components/Pages/BrowsePage';
+import TempPage from './components/Pages/TempPage';
 
 function App() {
   const appRouter = createBrowserRouter([
@@ -19,24 +16,24 @@ function App() {
       element: <LandingPage/>
     },
     {
-      path: "/browse",
+      path: "/browsePage",
       element: (
         <ProtectedRoute>
-          <Browse/>
+          <BrowsePage/>
         </ProtectedRoute>
       )
     },
     {
-      path: "/drop",
-      element: <DropProfile/>
+      path: "/movies/:movieId",
+      element: <TrailerPage/>
     },
     {
       path: "/main",
       element: <MainContainer/>
     },
     {
-      path: "/second",
-      element: <Header/>
+      path: "/comingsoon",
+      element: <TempPage/>
     }
   ])
   return (
