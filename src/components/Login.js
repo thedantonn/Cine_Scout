@@ -90,8 +90,8 @@ const Login = () => {
   return (
     <form 
     onSubmit={handleSubmit}
-    className=' flex flex-col justify-center  border-2 border-gray-400 px-14 space-y-1 w-4/12 h-1/2 text-left bg-black opacity-80'>
-        <h1 className='text-3xl font-semibold pb-3 text-white'>
+    className='flex flex-col justify-center  border-2 border-gray-400 xl:px-14 lg:px-12 md:px-10 sm:px-8 px-2 space-y-1 xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-1/2 w-1/2 h-1/2 text-left bg-black opacity-80 xl:text-2xl lg:text-xl md:text-lg sm:text-xs text-[8px] py-4'>
+        <h1 className='xl:text-3xl lg:text-2xl md:text-xl sm:text-lg text-sm font-semibold pb-3 text-white'>
             {issignin === false?
                "Sign In" : "Sign Up"}
         </h1>
@@ -100,21 +100,21 @@ const Login = () => {
                  type='text' 
                  placeholder='Name' 
                  ref={displayName}
-                 className='p-4 font-light border-2 border-gray-400 rounded-md bg-black  text-gray-500'/>) }
+                 className='xl:p-4 lg:p-3 md:p-2 sm:p-2 p-1 font-light border-2 border-gray-400 rounded-md bg-black  text-gray-500'/>) }
         <input 
         type='email' 
         placeholder='Email or mobile number'
         ref={email}
-        className='p-4 font-light border-2 border-gray-400 rounded-md bg-black  text-gray-500 ' />
+        className='xl:p-4 lg:p-3 md:p-2 sm:p-2 p-1 font-light border-2 border-gray-400 rounded-md bg-black  text-gray-500 ' />
         
         <input 
         type='password' 
         placeholder='Password'
         ref={password}
-        className='p-4 font-light border-2 border-gray-400 rounded-md bg-black  text-gray-500'/>
+        className='xl:p-4 lg:p-3 md:p-2 sm:p-2 p-1 font-light border-2 border-gray-400 rounded-md bg-black  text-gray-500'/>
         <p className='text-red-600 font-medium text-md'>{errormessage}</p>
         <button 
-        className='bg-red-600  text-white p-3 w-auto rounded-md'>
+        className='bg-red-600  text-white xl:p-4 lg:p-3 md:p-2 sm:p-2 p-1 w-auto rounded-md'>
             {issignin === false ? "Sign In" : "Sign Up" } 
         </button>
         

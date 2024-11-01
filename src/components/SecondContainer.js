@@ -14,8 +14,8 @@ const SecondContainer = () => {
 
   return (movies?.trailer === null) ?  (<ShimmerPage/>)
   : (
-    <div className= ' bg-black'>
-        <div className='-mt-52 relative z-20'>
+    <div className= 'bg-black'>
+        <div className='xl:-mt-50 lg:-mt-48 md:-mt-40 sm:-mt-32 -mt-52 relative z-20'>
         
         { searchedMovies === null ? (null)
          : (<MovieList title = {"Searched Movies"} movies = {searchedMovies}/>)

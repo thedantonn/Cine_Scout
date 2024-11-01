@@ -11,12 +11,14 @@ const VideoBackground = ({movieId}) => {
     useTrailer(movieId)
 
   return (
-    <div className=''>
-        <iframe className='w-screen aspect-video relative'
-        src={`${VIDEO_URL}${trailerVideo}?&autoplay=1&mute=${isVolume ? "1" : "0" }` }
+    <div className='relative h-[400px] sm:h-[400px] md:h-[500px] lg:h-screen  from-black'>
+        <iframe 
+        className='w-full h-full'
+        src={`${VIDEO_URL}${trailerVideo}?&autoplay=1&mute=${isVolume ? "1" : "0" }&loop=1&playlist=${trailerVideo}` }
         title="YouTube video player" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" >
         </iframe>
+        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
     </div>
   )
 }

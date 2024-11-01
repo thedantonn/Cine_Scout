@@ -10,7 +10,7 @@ export const SearchResult = () => {
 
 
   return (
-    <div className='w-full px-12 flex flex-col'>
+    <div className='w-full xl:px-6 lg:px-6 md:px-4 px-0 flex flex-row overflow-x-scroll pt-10 '>
       {MovieResult.map((movie)=> (
         <MovieList
         title={MovieName} 

@@ -11,9 +11,9 @@ const Background = () => {
       backgroundSize: 'cover',
 
     }}/>
-    <div className='absolute top-1 lg:left-48 md:left-10'>
+    <div className='absolute top-1 xl:left-48 lg:left-40 md:left-32 sm:left-24 left-16'>
     <img 
-      className="w-48" 
+      className="xl:w-48 lg:w-44 md:w-40 sm:w-36 w-32" 
       src={Netflix_Logo} 
       alt="Netflix-logo" 
     />

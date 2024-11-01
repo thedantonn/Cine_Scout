@@ -16,8 +16,8 @@ const MovieList = ({title,movies}) => {
   }
 
   return (
-    <div className='px-12 py-4'>
-     { movies?.length > 1 ? <h1 className='text-white text-xl pb-3'>{title}</h1> :
+    <div className='xl:px-12 lg:px-10 md:px-8 px-2 py-4 xl:mt-0 lg:mt-0 md:mt-0 sm:mt-4 mt-8 xl:text-2xl lg:text-xl md:text-lg sm:text-sm text-xs'>
+     { movies?.length > 1 ? <h1 className='text-white pb-3'>{title}</h1> :
      (null) }
        <div className='flex overflow-x-scroll'>
         <div className='flex space-x-4'>
@@ -34,7 +34,7 @@ const MovieList = ({title,movies}) => {
         
               <div>
                 <Link to={"/movies/" + movies?.id}>
-                <h1 className='text-white text-xl pb-3'>{movies?.title}</h1>
+                <h1 className='text-white pb-3'>{movies?.title}</h1>
                 <MovieCard 
                 onClick = {handleTrailerChange}
                 movieInfo={movies}
