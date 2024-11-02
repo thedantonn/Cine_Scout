@@ -8,6 +8,7 @@ import MainContainer from './components/MainContainer';
 import TrailerPage from './components/Pages/TrailerPage';
 import BrowsePage from './components/Pages/BrowsePage';
 import TempPage from './components/Pages/TempPage';
+import CollectionPage from './components/Pages/CollectionPage';
 
 function App() {
   const appRouter = createBrowserRouter([
@@ -34,6 +35,10 @@ function App() {
     {
       path: "/comingsoon",
       element: <TempPage/>
+    },
+    {
+      path: "/collection",
+      element: <CollectionPage/>
     }
   ])
   return (

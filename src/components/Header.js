@@ -36,11 +36,10 @@ export const Header = () => {
        <img 
         className=" xl:w-36 lg:w-32 md:w-28 sm:w-24 w-16 m-2"
         src={Netflix_Logo} alt = "netflix_logo"/>
-    
         <ul className="flex flex-row xl:space-x-12 lg:space-x-7 md:space-x-5 xl:text-xl lg:text-sm md:text-sm sm:text-xs text-[5px]">
             <li onClick={handleMediaToggle}><Link to={"/browsePage"}>{selectedmedia ? <h1>Movies</h1> :<h1>TV Shows</h1>}</Link></li>
             <li><Link to={"/comingsoon"}>New & Popular</Link></li>
-            <li><Link to={"/comingsoon"}>My List</Link></li>
+            <li><Link to={"/collection"}>My Collection</Link></li>
             <li><Link to={"/comingsoon"}>Browse by Languages</Link></li>
         </ul>
        </div>
