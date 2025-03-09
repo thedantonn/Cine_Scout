@@ -78,7 +78,7 @@ const Login = () => {
     const user = userCredential.user;
     const {uid,displayName,email}= user;
     dispatch(createUser({uid: uid, displayName: displayName, email: email}))
-    navigate("/browsePaage")
+    navigate("/browsePage")
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -90,8 +90,9 @@ const Login = () => {
   return (
     <form 
     onSubmit={handleSubmit}
-    className='flex flex-col justify-center  border-2 border-gray-400 xl:px-14 lg:px-12 md:px-10 sm:px-8 px-2 space-y-1 xl:w-1/2 lg:w-1/2 md:w-1/2 sm:w-1/2 w-1/2 h-1/2 text-left bg-black opacity-80 xl:text-2xl lg:text-xl md:text-lg sm:text-xs text-[8px] py-4'>
-        <h1 className='xl:text-3xl lg:text-2xl md:text-xl sm:text-lg text-sm font-semibold pb-3 text-white'>
+    className="flex flex-col justify-center border-2 border-cyan-400 shadow-md xl:px-12 lg:px-10 md:px-8 sm:px-6 px-4 space-y-4 
+               xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-2/3 w-11/12 h-auto text-left bg-black/60 backdrop-blur-md rounded-lg p-6">
+        <h1 className='xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl text-lg font-bold text-cyan-300'>
             {issignin === false?
                "Sign In" : "Sign Up"}
         </h1>
@@ -100,28 +101,32 @@ const Login = () => {
                  type='text' 
                  placeholder='Name' 
                  ref={displayName}
-                 className='xl:p-4 lg:p-3 md:p-2 sm:p-2 p-1 font-light border-2 border-gray-400 rounded-md bg-black  text-gray-500'/>) }
+                 className='w-full p-3 border-2 border-cyan-400 rounded-md bg-black text-cyan-300 
+                       placeholder-cyan-400 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all'/>) }
         <input 
         type='email' 
         placeholder='Email or mobile number'
         ref={email}
-        className='xl:p-4 lg:p-3 md:p-2 sm:p-2 p-1 font-light border-2 border-gray-400 rounded-md bg-black  text-gray-500 ' />
+        className='w-full p-3 border-2 border-cyan-400 rounded-md bg-black text-cyan-300 
+                       placeholder-cyan-400 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all' />
         
         <input 
         type='password' 
         placeholder='Password'
         ref={password}
-        className='xl:p-4 lg:p-3 md:p-2 sm:p-2 p-1 font-light border-2 border-gray-400 rounded-md bg-black  text-gray-500'/>
-        <p className='text-red-600 font-medium text-md'>{errormessage}</p>
+        className='w-full p-3 border-2 border-cyan-400 rounded-md bg-black text-cyan-300 
+                       placeholder-cyan-400 focus:outline-none focus:ring-2 focus:ring-pink-500 transition-all'/>
+        <p className='text-pink-500 font-medium'>{errormessage}</p>
         <button 
-        className='bg-red-600  text-white xl:p-4 lg:p-3 md:p-2 sm:p-2 p-1 w-auto rounded-md'>
+        className='w-full p-3 font-bold rounded-md bg-gradient-to-r from-cyan-500 to-pink-500 text-black 
+                   hover:from-pink-500 hover:to-cyan-500 transition-all'>
             {issignin === false ? "Sign In" : "Sign Up" } 
         </button>
         
-        <h1 className='text-gray-500'>
+        <h1 className='text-cyan-400'>
             {issignin === false ? 
-            (<p>New to Netflix? <span onClick={handleClick} className='text-white hover:cursor-pointer'>Sign up now.</span></p>) 
-            : (<p>Already a member? <span onClick={handleClick} className='text-white hover:cursor-pointer'>Sign in.</span></p>)} </h1>
+            (<p>New to CineScout? <span onClick={handleClick} className='text-pink-400 hover:underline cursor-pointer'>Sign up now.</span></p>) 
+            : (<p>Already a member? <span onClick={handleClick} className='text-pink-400 hover:underline cursor-pointer'>Sign in.</span></p>)} </h1>
     </form>
   )
 }

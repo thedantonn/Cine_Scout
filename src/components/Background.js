@@ -12,11 +12,6 @@ const Background = () => {
 
     }}/>
     <div className='absolute top-1 xl:left-48 lg:left-40 md:left-32 sm:left-24 left-16'>
-    <img 
-      className="xl:w-48 lg:w-44 md:w-40 sm:w-36 w-32" 
-      src={Netflix_Logo} 
-      alt="Netflix-logo" 
-    />
     </div></div>
   )
 }

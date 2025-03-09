@@ -43,13 +43,13 @@ const SearchBar = () => {
     <div className='w-full xl:m-0 lg:m-0 md:m-20 -m-12 xl:px-12 lg:px-10 md:px-8 px-2'>
         <form className='grid grid-cols-12 gap-4' onSubmit={(e) => e.preventDefault()}> 
             <input 
-            className="text-black bg-white col-span-9 xl:text-xl lg:text-xl md:text-xl sm:text-xs text-[9px] p-2 text-center" 
+            className="col-span-9 bg-black text-[#00FFFF] border-2 border-[#00FFFF] xl:text-xl lg:text-xl md:text-xl sm:text-xs text-[9px] p-2 text-center rounded-md focus:ring-2 focus:ring-[#00FFFF] outline-none transition duration-300" 
             type='text' 
             placeholder={lang[languageType].gptSearchPlaceholder}
             ref={search}/>
             <button 
             onClick={GenerateResult}
-            className='bg-red-700 text-white lg:p-4  col-span-3 xl:text-xl lg:text-lg md:text-sm sm:text-xs text-[9px]'>{lang[languageType].search}</button>
+            className='col-span-3 bg-[#00FFFF] text-black font-bold lg:p-4 xl:text-xl lg:text-lg md:text-sm sm:text-xs text-[9px] rounded-md hover:bg-[#00CCFF] hover:shadow-lg transition duration-300'>{lang[languageType].search}</button>
         </form>
     </div>
   )

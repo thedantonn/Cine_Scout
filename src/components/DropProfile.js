@@ -27,7 +27,7 @@ const DropProfile = () => {
             <button 
             className='xl:text-sm lg:text-[12px] md:text-[11px] sm:text-[10px] text-[6px] flex justify-center xl:p-4 lg:p-3 md:p-2 sm:p-1 p-1 xl:border-t-2 lg:border-t-2 '
             onClick={handleSignout}
-            >Sign out of Netflix</button>  
+            >Sign out of CineScout</button>  
         </ul>
         
     </div>
